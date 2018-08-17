@@ -1,0 +1,26 @@
+@import "bootstrap";
+@import "navbar";
+@import "lessons";
+@import "pages";
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400|Montserrat|Playfair+Display|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+.sessions{
+  border-radius: 0;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  background-color: transparent;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15)), image-url("space.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .login{
+    margin-left: 40%;
+    margin-right: 40%;
+    .form_devise{
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

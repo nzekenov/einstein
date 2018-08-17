@@ -1,0 +1,95 @@
+<% provide :page_title, 'Welcome'%>
+<div class="jumbotron" id="content1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <h1 class="display-4">Become Einstein!</h1>
+        <p class="lead">Enjoy lessons, videos and other materials to understand physics much better.</p>
+        <hr class="my-4">
+        <p><small>You have to sign up to upload your own lessons.</small></p>
+        <p class="lead">
+          <%= link_to "Let's start", lessons_path, class: "btn btn-white btn-lg" %>
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-0">
+        <%= image_tag("macbook.png", class: "intro_icon")%>
+      </div>
+    </div>
+  </div>
+  <!-- <a href="#content2"><span></span></a> -->
+</div>
+<div class="jumbotron_second" id="content2">
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto">
+        <h1 class="section_header">Who is Einstein?</h1>
+      </div>
+      <div class="info row">
+        <div class="col-md-5">
+          <img src="http://www.socialaction.dk/wp-content/uploads/2012/12/Einstein-2-copy2.png" class="einstein">
+        </div>
+        <div class="offset-md-1 col-md-6">
+          <p class="description"><strong>Albert Einstein, </strong>(14 March 1879 – 18 April 1955) was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics (alongside quantum mechanics). His work is also known for its influence on the philosophy of science. He is best known to the general public for his mass–energy equivalence formula <img src="https://image.flaticon.com/icons/svg/892/892099.svg" class="formula">, which has been dubbed "the world's most famous equation". He received the 1921 Nobel Prize in Physics "for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect", a pivotal step in the development of quantum theory.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- <a href="#content3"><span></span></a> -->
+</div>
+<div class="jumbotron_third" id="content3">
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto">
+        <h1 class="section_header">What do we offer?</h1>
+      </div>
+      <div class="info row">
+        <div class="col-md-5">
+          <p class="description"><strong>Einstein</strong> - is a unique platform where you can learn physics independently on your phone, tablet, laptop or PC. You can find out all materials from grade 7 to grade 12 and prepare for your exams. We have prepared for you a lot of interesting video, photo and interactive materials to make learning physics much easy. Use our platform and become Einstein!</p>
+        </div>
+        <div class="col-md-6">
+          <img src="https://www.netsfere.com/images/multi-device-mockup.png" class="banner">
+        </div>
+      </div>
+  </div>
+</div>
+<!-- <a href="#content4"><span></span></a> -->
+</div>
+<div class="jumbotron_fourth" id="content4">
+    <div class="mx-auto text-center">
+      <h1 class="section_header">Pricing</h1>
+      <p class="description lead">We made using this platform for free, so that you can become a real Einstein!</p>
+    </div>
+        <div class="card mx-auto text-center">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal section_header">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">0₸ <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>All learning materials are available</li>
+              <li>Teacher's support<small> (Soon)</small></li>
+              <li>Emailing<small> (Soon)</small></li>
+              <li>Additional services<small> (Soon)</small></li>
+            </ul>
+            <%= link_to "Use it for free", lessons_path, class: "btn btn-lg btn-block btn-outline-primary" %>
+          </div>
+        </div>
+        <!-- <a href="#content1"><span></span></a> -->
+</div>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md">
+              <%= image_tag 'einstein.png'%>
+            </div>
+            <div class="col-md">
+
+            </div>
+            <div class="col-md text-right">
+              <small class="d-block mb-3 text-muted">© Einstein Labs, 2018</small>
+            </div>
+          </div>
+        </div>
+      </footer>

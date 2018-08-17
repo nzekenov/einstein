@@ -1,0 +1,68 @@
+.welcome{
+  .jumbotron{
+    border-radius: 0;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    background-color: transparent;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)), image-url("space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #fafafa;
+    .my-4{
+      background-color: #fafafa;
+    }
+    .intro_icon{
+      width: inherit;
+      overflow: hidden;
+      width: 500px;
+    }
+    .btn-white{
+      background-color: #fafafa;
+      color: #1f1f1f;
+      border-radius: 1px;
+    }
+  }
+  .einstein{
+    width: inherit;
+  }
+  .description{
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 1.3em;
+   margin-top: 6vh;
+   strong{
+     font-weight: 900;
+   }
+   .formula{
+     height: 2em;
+   }
+  }
+  .section_header{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    margin-top: 6vh;
+  }
+  .info{
+    margin-top: 4vh;
+  }
+  .jumbotron_third{
+    background-color: #343434;
+    margin-top: 6vh;
+    color: white;
+    overflow: hidden;
+    .banner{
+      height: 55vh;
+    }
+    .description{
+      font-weight: 100;
+    }
+  }
+  .jumbotron_fourth{
+    .card{
+      max-width: 300px;
+    }
+  }
+}

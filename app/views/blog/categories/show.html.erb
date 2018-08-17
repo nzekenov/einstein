@@ -1,0 +1,6 @@
+<h1><%= @category.name %></h1>
+<% if @category.lessons.empty? %>
+<h2>Нет уроков</h2>
+<% else %>
+  <%= render @category.lessons %>
+<% end %>

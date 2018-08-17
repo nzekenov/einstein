@@ -1,0 +1,9 @@
+<% provide :page_title, 'All Lessons'%>
+<% provide :lessons_active, 'active' %>
+
+<div class="row">
+    <%= render @lessons %>
+</div>
+<div class="pagination">
+<%= will_paginate @posts %>
+</div>

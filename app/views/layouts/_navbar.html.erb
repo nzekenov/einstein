@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light navbar-expand-md bg-white justify-content-between raleway">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="/" class="navbar-brand mx-auto d-block text-center display-4 raleway">Ein<strong>stein</strong></a>
+        <div class="navbar-collapse collapse dual-nav w-50 order-2">
+            <ul class="nav navbar-nav ml-auto">
+              <a class="nav-link disabled" href="#">Einstein mobile</a>
+              <li class="nav-item <%= yield :about_active %>">
+                <%= link_to 'About', about_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item <%= yield :lessons_active %>">
+                <%= link_to 'Lessons', lessons_path, class: "nav-link" %>
+              </li>
+
+
+              <% if author_signed_in? %>
+              <li class="nav-item ">
+
+              </li>
+              <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= current_author.name %> <%=image_tag current_author.avatar.url(:thumb), class: "icon" %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'My lessons', authors_lessons_path, class: "dropdown-item" %>
+          <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </li>
+              <li class="nav-item">
+
+              </li>
+              <% else %>
+              <li class="nav-item <%= yield :author_sign_in %>">
+                <%= link_to 'Log In', new_author_session_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item <%= yield :author_sign_up %>">
+              <strong>  <%= link_to 'Sign Up', new_author_registration_path, class: "nav-link test" %><strong>
+              </li>
+              <% end %>
+
+            </ul>
+        </div>
+    </div>
+</nav>

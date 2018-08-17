@@ -1,0 +1,70 @@
+<%= form_for(lesson, url: url)  do |form| %>
+  <% if lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+      <% lesson.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea#lesson_body',
+    plugins: "codesample emoticons image code media link visualblocks hr",
+    toolbar: "undo redo | styleselect | bold | italic| codesample | emoticons | image | code | media | link | visualblocks" });
+
+    </script>
+
+<div class="row">
+  <div class="col-lg-4">
+      <div class="card">
+    <div class="card-body">
+      <h5 class="card-title display-4"><% if @lesson.new_record? %>
+New Lesson
+<% else %>
+        <%= yield(:page_title)%></h5>
+        <% end %>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="field">
+          <%= form.label :title %>
+          <%= form.text_field :title, id: :lesson_title, :class=>"form-control" %>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="field">
+            <%= form.label :banner_image_url %>
+            <%= form.text_field :banner_image_url, id: :lesson_banner_image_url, :class=>"form-control" %>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="field">
+            <%= form.label :all_categories %>
+            <%= form.text_field :all_categories, :class=>"form-control" %>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="field">
+          <%= form.label :description %>
+          <%= form.text_area :description, id: :lesson_description, :class=>"form-control" %>
+        </div>
+      </li>
+    </ul>
+      <%= form.submit 'Submit', :class=> "btn btn-success", :style=>"border-radius: 0;" %>
+  </div>
+
+
+  </div>
+  <div class="col-lg-8">
+    <div class="card">
+      <%= form.text_area :body, id: :lesson_body, :style=>"min-height:23rem;" %>
+    </div>
+  </div>
+</div>
+
+<% end %>

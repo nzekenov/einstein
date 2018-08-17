@@ -1,0 +1,6 @@
+<% provide :page_title, 'New Lesson'%>
+<% provide :author, 'active'%>
+
+<%= render 'form', lesson: @lesson, url: authors_lessons_url %>
+
+<%= link_to 'Back', authors_lessons_path %>

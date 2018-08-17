@@ -1,0 +1,15 @@
+<% provide :page_title, 'All Lessons'%>
+<% provide :author, 'active'%>
+<div class="row">
+  <div>
+  <%= link_to 'New Lesson', new_authors_lesson_path, class: 'btn btn-lg btn-primary' %>
+  </div>
+  <br>
+  <table class="table table-striped">
+      <tr>
+        <th colspan="5">Title</th>
+      </tr>
+  <%= render @lessons %>
+  </table>
+
+</div>

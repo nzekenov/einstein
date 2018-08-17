@@ -1,0 +1,13 @@
+<div class="col-sm-6 col-lg-4">
+  <div class="card">
+    <div class="card-topper" style="background-image: url(<%= lesson.banner_image_url %>);">
+    </div>
+    <div class="card-block">
+      <h4 class="card-title"><%= link_to lesson.title, lesson %></h4>
+      <p class="footer-summary"><%= raw lesson.categories.map(&:name).map{ |category| link_to category, category_path(category), class: 'tag tag-primary' }.join(' ') %></p>
+      <p class="published-date"><%= lesson.display_day_published %></p>
+      <p class="card-text"><%= truncate(lesson.description, length: 130) %></p>
+      <%= link_to 'Read', lesson, class: "btn btn-read" %>
+    </div>
+  </div>
+</div>
