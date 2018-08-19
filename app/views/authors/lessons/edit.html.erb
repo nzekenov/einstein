@@ -1,8 +1,10 @@
 <% provide :page_title, "Edit #{@lesson.title}" %>
 <% provide :author, 'active'%>
 
+<div class="container">
+  <%= render 'form', lesson: @lesson, url: authors_lesson_url(@lesson) %>
 
-<%= render 'form', lesson: @lesson, url: authors_lesson_url(@lesson) %>
+  <%= link_to 'Show', @lesson , class: "btn btn-primary"%>
+  <%= link_to 'Back', authors_lessons_path, class: "btn btn-primary"%>
 
-<%= link_to 'Show', @lesson %> |
-<%= link_to 'Back', authors_lessons_path %>
+</div>

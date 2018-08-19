@@ -7,9 +7,6 @@
         <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <a class="nav-link disabled" href="#">Einstein mobile</a>
-              <li class="nav-item <%= yield :about_active %>">
-                <%= link_to 'About', about_path, class: "nav-link" %>
-              </li>
               <li class="nav-item <%= yield :lessons_active %>">
                 <%= link_to 'Lessons', lessons_path, class: "nav-link" %>
               </li>
@@ -21,7 +18,7 @@
               </li>
               <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= current_author.name %> <%=image_tag current_author.avatar.url(:thumb), class: "icon" %>
+          <%= current_author.name %> <%=image_tag current_author.avatar.url(:thumb), class: "icon img-thumbnail" %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to 'My lessons', authors_lessons_path, class: "dropdown-item" %>

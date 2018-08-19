@@ -1,13 +1,28 @@
 <% provide :page_title, @lesson.title%>
 <% provide :author, 'active'%>
+<div class="container">
 <div>
 <%= link_to 'Edit', edit_authors_lesson_path(@lesson), class: 'btn btn-sm btn-warning' %>
 <%= link_to 'Remove', authors_lesson_path(@lesson), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-sm btn-danger' %>
 </div>
-<div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
-      <h1><%= @lesson.title %></h1>
-      <p><%= @lesson.display_day_published %></p>
+<div class="paraq">
+<div class="container">
+  <div class="row">
+    <div class="lesson col-md-8 offset-md-2 text-left">
+      <h1 class="sabaq"><%= @lesson.title %></h1>
+      <p class="date"><%= @lesson.display_day_published%></p>
       <%= @lesson.body.html_safe %>
+      <hr>
+
     </div>
+    <div class="author-bio col-md-8 offset-md-2 text-center">
+      <%= image_tag(@lesson.author.avatar.url, class: "author-avatar") %>
+      <h4><%= @lesson.author.name %></h4>
+      <p class="bio"><%= @lesson.author.bio %></p>
+    </div>
+      <hr>
+      <div id="disqus_thread" class="col-md-8 offset-md-2"></div>
+  </div>
+</div>
+</div>
 </div>

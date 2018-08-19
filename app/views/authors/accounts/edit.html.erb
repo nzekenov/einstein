@@ -1,84 +1,88 @@
-<div class="row">
+<% provide :page_title, 'Edit account'%>
+<% provide :author, 'active' %>
+<div class="container">
+  <div class="row">
 
-  <div class="col-md-6">
-      <%= form_tag authors_info_path, :multipart => true , method: :put  do %>
-      <%= fields_for :author do |f| %>
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">
-            <h4>Basic info</h4>
+    <div class="col-md-6 text-center">
+        <%= form_tag authors_info_path, :multipart => true , method: :put  do %>
+        <%= fields_for :author do |f| %>
+        <div class="card">
+          <div class="card-block">
+            <div class="card-title">
+              <h2>Basic info</h2>
+            </div>
           </div>
-        </div>
-      <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <%= image_tag current_author.avatar.url(:medium), class: "img-thumbnail avatar" %><br>
+            <%= f.file_field :avatar %>
+          </li>
         <li class="list-group-item">
-          <%= f.label :avatar %><br>
-          <%= image_tag current_author.avatar.url(:medium) %><br>
-          <%= f.file_field :avatar %>
-        </li>
-      <li class="list-group-item">
-        <div class="field">
-          <%= f.label :name %>
-          <%= f.text_field :name , value: current_author.name, class: 'form-control' %>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="field">
-            <%= f.label :email %>
-            <%= f.text_field :email , value: current_author.email, class: 'form-control' %>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="field">
-          <%= f.label :bio %>
-          <%= f.text_field :bio  , value: current_author.bio, class: 'form-control' %>
-        </div>
-      </li>
-      <li class="list-group-item">
-      <%= f.submit "Update info", class: 'btn btn-primary' %>
-    </li>
-    </ul>
-  </div>
-</div>
-<% end %>
-  <% end %>
-
-  <div class="col-md-6">
-    <%= form_tag authors_change_password_path, method: :put do %>
-    <%= fields_for :author do |f| %>
-      <div class="card">
-        <div class="card-block">
-          <div class="card-title">
-            <h4>Change password</h4>
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name , value: current_author.name, class: 'form-control' %>
           </div>
-        </div>
-      <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <div class="field">
-          <%= f.label :current_password %>
-          <%= f.password_field :current_password , class: 'form-control' %>
-        </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+              <%= f.label :email %>
+              <%= f.text_field :email , value: current_author.email, class: 'form-control' %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+            <%= f.label :bio %>
+            <%= f.text_field :bio  , value: current_author.bio, class: 'form-control' %>
+          </div>
+        </li>
+        <li class="list-group-item">
+        <%= f.submit "Update info", class: 'btn btn-success' %>
       </li>
-      <li class="list-group-item">
-        <div class="field">
-            <%= f.label :new_password %>
-            <%= f.password_field :new_password , class: 'form-control' %>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="field">
-          <%= f.label :new_password_confirmation %>
-          <%= f.password_field :new_password_confirmation , class: 'form-control' %>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <%= f.submit "Change Password", class: 'btn btn-warning' %>
-      </li>
-    </ul>
-  </div>
-
-
+      </ul>
+    </div>
   </div>
   <% end %>
-  <% end %>
+    <% end %>
+
+    <div class="col-md-6 text-center">
+      <%= form_tag authors_change_password_path, method: :put do %>
+      <%= fields_for :author do |f| %>
+        <div class="card">
+          <div class="card-block">
+            <div class="card-title">
+              <h2>Change password</h2>
+            </div>
+          </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="field">
+            <%= f.label :current_password %>
+            <%= f.password_field :current_password , class: 'form-control' %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+              <%= f.label :new_password %>
+              <%= f.password_field :new_password , class: 'form-control' %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+            <%= f.label :new_password_confirmation %>
+            <%= f.password_field :new_password_confirmation , class: 'form-control' %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <%= f.submit "Change Password", class: 'btn btn-warning' %>
+        </li>
+      </ul>
+    </div>
+
+
+    </div>
+    <% end %>
+    <% end %>
+
+  </div>
 
 </div>

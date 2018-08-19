@@ -1,9 +1,10 @@
 <% provide :page_title, 'All Lessons'%>
 <% provide :lessons_active, 'active' %>
-
-<div class="row">
-    <%= render @lessons %>
-</div>
-<div class="pagination">
-<%= will_paginate @posts %>
+<div class="container">
+  <div class="row">
+      <%= render @lessons %>
+  </div>
+  <div class="pagination justify-content-center">
+    <%= will_paginate(@lessons, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
 </div>

@@ -2,25 +2,171 @@
 @import "navbar";
 @import "lessons";
 @import "pages";
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400|Montserrat|Playfair+Display|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&subset=cyrillic-ext');
 .sessions{
-  border-radius: 0;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-  background-color: transparent;
-  overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15)), image-url("space.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+  background-color: #2b2b36;
+  height: 89.7vh;
   .login{
-    margin-left: 40%;
-    margin-right: 40%;
-    .form_devise{
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    border: 0.5px #2b2b36 solid;
+    margin-top: 5vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    .field{
+      margin: 10px;
+    }
+    .form-check-label{
+      font-weight: 100;
+    }
+    .remember{
+      text-align: left !important;
+      margin: 10px;
+      margin-left: 30px;
+    }
+    .btn{
+      width: 95%;
+      margin-bottom: 20px;
     }
   }
+  .row{
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .brand{
+    padding: 60px;
+  }
+}
+.registrations{
+  background-color: #2b2b36;
+  height: 89.7vh;
+  .login{
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    border: 0.5px #2b2b36 solid;
+    margin-top: 2vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    .field{
+      margin: 10px;
+    }
+    .form-check-label{
+      font-weight: 100;
+    }
+    .remember{
+      text-align: left !important;
+      margin: 10px;
+      margin-left: 30px;
+    }
+    .btn{
+      width: 95%;
+      margin-bottom: 20px;
+    }
+  }
+  .row{
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .brand{
+    padding: 55px;
+  }
+
+}
+.accounts{
+  font-family: 'Raleway', sans-serif;
+  .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .col-md-6{
+    color: white;
+    .card, .list-group, .list-group-item{
+      background-color: #00a2e0 !important;
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+}
+.lessons{
+  background-color: white;
+  .author-avatar{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+  }
+  .author-bio{
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    .bio{
+      font-size: 15px;
+      font-weight: 100;
+      color: #9293a3;
+    }
+  }
+  .lesson{
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    strong{
+      font-weight: 700;
+    }
+    font-weight:400;
+  }
+  .date{
+    font-family: 'Roboto', serif;
+    color: #9293a3;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .sabaq{
+    font-weight: 700;
+  }
+}
+figure.image {
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 2px 0 1px;
+}
+
+figure.align-left {
+    float: left;
+}
+
+figure.align-right {
+    float: right;
+}
+
+figure.image img {
+    margin: 8px 8px 0 8px;
+}
+
+figure.image figcaption {
+    margin: 6px 8px 6px 8px;
+    text-align: center;
+    font-family: 'Roboto', serif;
+    color: grey;
+    font-size: 15px;
+    font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+    .sessions{
+      .login{
+        margin-top: 0;
+        border: 0;
+      }
+    }
+    .registrations{
+      .login{
+        margin-top: 0;
+        border: 0;
+      }
+    }
 }

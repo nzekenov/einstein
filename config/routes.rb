@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
   scope module: 'blog' do
     resources :categories, only: [:show]
-    get 'about' => 'pages#about', as: :about
     get 'lessons' => 'lessons#index', as: :lessons
     get 'lessons/:id' => 'lessons#show', as: :lesson
   end
