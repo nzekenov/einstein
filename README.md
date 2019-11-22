@@ -9,6 +9,8 @@ Functionality:
 - WYSIWYG in creation of lesson allows to use different types of files, materials as well as designing
 
 
+For this project I used:
 * Ruby & Rails version
 Rails v: 5.1.6, Ruby 2.5.0p0
 
+- tinyMCE (for the first time)
