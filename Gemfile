@@ -33,7 +33,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'carrierwave', '~> 1.0'
 gem "paperclip", "~> 6.0.0"
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'bootstrap-will_paginate'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
